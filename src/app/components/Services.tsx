@@ -1,10 +1,9 @@
 'use client';
 
-import Header from './Header';
 import '../styles/Services.css';
-import Sidebar from './Sidebar';
 import { useRouter } from 'next/navigation';
 import ShowreelModal from '../components/ShowreelModal';
+import Image from 'next/image';
 
 export default function ServicesPage() {
   const router = useRouter();
@@ -15,9 +14,6 @@ export default function ServicesPage() {
 
   return (
     <div className="container">
-      {/* <Sidebar /> */}
-      {/* <Header /> */}
-
       <div className="content">
         {/* Left Section with heading and text */}
         <div className="leftSection">
@@ -42,10 +38,12 @@ export default function ServicesPage() {
               can portray the totality of your brand’s image.
             </p>
             <div className="hoverImage">
-              <img src="/creative.jpg" alt="Creative Hover" />
-              <img
+              <Image src="/creative.jpg" alt="Creative Hover" width={400} height={300} />
+              <Image
                 src="/arrow.svg"
                 alt="Arrow"
+                width={24}
+                height={24}
                 className="hoverArrow"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -62,10 +60,12 @@ export default function ServicesPage() {
               and optimised data to target and reach your treasured audience wherever they are.
             </p>
             <div className="hoverImage">
-              <img src="/performance.jpg" alt="Performance Hover" />
-              <img
+              <Image src="/performance.jpg" alt="Performance Hover" width={400} height={300} />
+              <Image
                 src="/arrow.svg"
                 alt="Arrow"
+                width={24}
+                height={24}
                 className="hoverArrow"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -80,13 +80,15 @@ export default function ServicesPage() {
             <p>
               Where can one visit to become personal with your brand? Yes, your brand home. Our
               Website developers along with our designers and writers work together in
-              architecting th...
+              architecting the perfect one.
             </p>
             <div className="hoverImage">
-              <img src="/performance.jpg" alt="Website Hover" />
-              <img
+              <Image src="/performance.jpg" alt="Website Hover" width={400} height={300} />
+              <Image
                 src="/arrow.svg"
                 alt="Arrow"
+                width={24}
+                height={24}
                 className="hoverArrow"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -100,11 +102,11 @@ export default function ServicesPage() {
             <h2>Content</h2>
             <p>
               Words have power of their own and when placed carefully together they come out with
-              meaning. Our writers craft words carefully together to give your brand the perfect...
+              meaning. Our writers craft words carefully together to give your brand the perfect voice.
             </p>
             <div className="hoverImage">
-              <img src="/performance.jpg" alt="Content Hover" />
-              <img
+              <Image src="/performance.jpg" alt="Content Hover" width={400} height={300} />
+              <Image
                 src="/arrow.svg"
                 alt="Arrow"
                 width={24}
