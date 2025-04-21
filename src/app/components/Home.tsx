@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar';
 import DotOverlay from './DotOverlay';
 import Image from 'next/image';
 import '../styles/Home.css';
 import Link from 'next/link';
+
+const words = ['DARE', 'VENTURE', 'RISK']; // ✅ moved outside to avoid dependency warning
+
 export default function Home() {
-  const words = ['DARE', 'VENTURE', 'RISK'];
   const [index, setIndex] = useState(0);
   const [text, setText] = useState('');
   const [charIndex, setCharIndex] = useState(0);
@@ -38,22 +38,8 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, index]);
 
-  // ✅ Scroll to section with id="aboutus"
-  const handleArrowClick = () => {
-    const section = document.getElementById('aboutus');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
-      {/* Logo top‑left */}
-    
-
-      {/* <Header /> */}
-      {/* <Sidebar /> */}
-
       <main className="home-section">
         <div className="home-content">
           <h1 className="glitch-text">WE SHALL</h1>
@@ -71,14 +57,8 @@ export default function Home() {
             <span>Content</span>
           </div>
 
-          {/* ⬇ Scroll to #aboutus section */}
           <Link href="/aboutus" className="circle-arrow">
-            <Image
-              src="/arrow.svg"
-              alt="Arrow"
-              width={24}
-              height={24}
-            />
+            <Image src="/arrow.svg" alt="Arrow" width={24} height={24} />
           </Link>
         </div>
       </main>

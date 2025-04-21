@@ -86,7 +86,7 @@
   grid-template-rows: repeat(2, auto);
   padding: 100px 60px 40px 40px;
   column-gap: 40px;
-  row-gap: 20px; /* Reduced vertical gap between rows */
+  row-gap: 10px; /* Reduced vertical gap between rows */
   color: white;
   align-items: start;
 }

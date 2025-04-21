@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, KeyboardEvent } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import '../styles/DotOverlay.css';
@@ -17,8 +17,8 @@ export default function DotOverlay({ isOpen, onClose }: DotOverlayProps) {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
-    window.addEventListener('keydown', onKey as any);
-    return () => window.removeEventListener('keydown', onKey as any);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
 
   const menuItems = [
